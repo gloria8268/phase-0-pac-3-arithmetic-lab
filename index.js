@@ -22,22 +22,17 @@ function decrement(a) {
   return --a;
 }
 
-function makeInt(n) {
-  return parseInt(n, 10);
+const makeInt = (n) => {
+  return parseInt(n.toString(), 10);
 }
 
-// console.log(makeInt("2"));
+console.log(makeInt(10));
+console.log(makeInt('0x2328'));
+console.log(isNaN(makeInt('sldkjflksjf')));
 
-// console.log(makeInt("0x2328"));
-
-// let c = makeInt("sldkjflksjf");
-// console.log(isNaN(c));
-
-function preserveDecimal(n) {
+function preserveDecimal(n){
   return parseFloat(n);
 }
 
-// console.log(preserveDecimal("2.222"));
-
-// let d = preserveDecimal("sldkjflksjf");
-// console.log(isNaN(d));
+console.log(preserveDecimal('2.222'));
+console.log(isNaN(preserveDecimal('sldkjflksjf')));
